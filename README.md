@@ -13,6 +13,7 @@ Stay organized and boost your productivity with LDQ Notes, the ultimate digital 
 # Development
 + Xcode 15.0
 + Minimum Deployments: iOS 16.0
++ COCOAPODS: 1.13.0
 
 # Time spent: 25 hours
 + View, analyze bussiness requirement, plan layout and screen ideas  (~ 3h)
