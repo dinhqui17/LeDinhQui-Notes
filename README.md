@@ -10,6 +10,10 @@ Stay organized and boost your productivity with LDQ Notes, the ultimate digital 
 + Users can view a list of their saved notes.
 + Users can view notes from other users, but cannot edit them.
 
+# Development
++ Xcode 15.0
++ Minimum Deployments: iOS 16.0
+
 # Time spent: 25 hours
 + View, analyze bussiness requirement, plan layout and screen ideas  (~ 3h)
 + Set up Firebase Realtime DB (~ 2h)
@@ -47,3 +51,5 @@ As for the technology, I chose to use the SwiftUI framework instead of the tradi
 + App Functions:
   + Viewing other user's notes does not seem to comply with privacy. I limited it by not allowing editing.
   + checkExistUser(): Client side check is not a secure solution. Better to use Cloud Functions for Firebase for it.
+
+
