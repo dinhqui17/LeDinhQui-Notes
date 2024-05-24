@@ -73,7 +73,7 @@ class LoginViewModel: ObservableObject {
     }
     
     func createUser() {
-        let user = UserModel(userId: UUID().uuidString, username: userName)
+        let user = UserModel(userId: UUID().uuidString, username: userName.lowercased())
         requestDataCancellable = DatabaseService.shared.addUser(user: user)
             .receive(on: DispatchQueue.main)
             .sink { [weak self] completion in
@@ -94,7 +94,7 @@ class LoginViewModel: ObservableObject {
     }
     
     func login() {
-        requestDataCancellable = DatabaseService.shared.checkExistUser(userName: userName)
+        requestDataCancellable = DatabaseService.shared.checkExistUser(userName: userName.lowercased())
             .receive(on: DispatchQueue.main)
             .sink { [weak self] completion in
                 switch completion {
