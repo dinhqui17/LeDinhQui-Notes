@@ -28,6 +28,7 @@ class UserNotesViewModel: ObservableObject {
     
     func loadNotes() {
         requestDataCancellable = DatabaseService.shared.getAllNotesFromUser(userId: userId)
+            .receive(on: DispatchQueue.main)
             .sink { [weak self] completion in
                 switch completion {
                 case .failure(let error):
